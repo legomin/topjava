@@ -23,9 +23,7 @@ public class MealServlet extends HttpServlet {
     private static final LoggerWrapper LOG = LoggerWrapper.get(MealServlet.class);
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-
-        Map<String,String[]> mapParam = request.getParameterMap();
+       Map<String,String[]> mapParam = request.getParameterMap();
         if (mapParam.containsKey("act")) {
             int id = Integer.parseInt(mapParam.get("id")[0]);
             if (mapParam.get("act")[0].equals("delete")) {
